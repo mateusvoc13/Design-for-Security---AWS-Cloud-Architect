@@ -1,0 +1,16 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+
+- Unencrypted secret recipes
+
+# Poor practice 2
+
+- API Credentials stored in machine
+
+# Bonus poor practices
+
+- Unprotected secret bucket
+- Poor routing among instances
+- Access to machines using keys/passwords
+- Security groups too opened
