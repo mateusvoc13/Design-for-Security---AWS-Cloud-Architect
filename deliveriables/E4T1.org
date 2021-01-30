@@ -4,6 +4,7 @@
 
 - Close the SSH (22) port in both instances---update the machine by creating a
   new image in a security environment and deploying it.
+- Disable password authentication.
 - Secure the SSH port to only trusted IPs through Security Groups, ACLs, or firewalls.
 - Move instances to a private subnet and use secure gateways for ingress/egress;
 

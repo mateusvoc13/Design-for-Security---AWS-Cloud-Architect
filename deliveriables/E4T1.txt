@@ -1,9 +1,0 @@
-
-# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
-
-- Close the SSH (22) port in both instances;
-- Move instances to private subnet and use secure gateways for ingress/egress.
-
-# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
-
--
