@@ -1,0 +1,14 @@
+Research and analyze which of the vulnerabilities appear to be related to the
+code that was deployed for the environment in this project.
+
+Vulnerabilities related to the code:
+- TCP and UDP ports, such as 20 and 23, are reachable from the internet.
+- Unencrypted EBS volumes;
+- Lack of HTTP/HTTPS redirection at the load balancer
+- Lack of HTTPS in CloudFront
+
+Recommendations:
+- Close the open ports using the ~close-instance-public-ports~ or selecting
+  another AMI while creating the instance;
+- Use an encrypted EBS volume while creating the instance;
+- Add the HTTPS protocol to the Elastic Load Balancer;

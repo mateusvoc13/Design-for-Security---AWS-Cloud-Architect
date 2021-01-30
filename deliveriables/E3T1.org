@@ -1,0 +1,28 @@
+# Describe GuardDuty findings that were detected related to the brute force
+  attack
+
+* Guard Duty Findings
+
+  - Severity: *HIGH* for the EC2 instance that was being used to perform the
+    brute force attack and *LOW* for the instance that was being attacked.
+
+  - Number of occurrences: 2
+
+  - Description:
+    - Example: ~i-04cf46a631195c978~ is performing SSH brute force attacks
+      against ~10.192.10.85~. Brute force attacks are used to gain unauthorized
+      access to your instance by guessing the SSH password.
+
+  - Details about the affected resources;
+      - Type, state, ID, port, role
+
+  - Details about the action:
+     - Type, direction, protocol, IP
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may
+  have detected this attack - i.e. what was its source of information.
+
+* How GuardDuty May Have Detected this attack?
+
+  The EC2/SSHBruteForce finding is generated through monitoring traffic on port
+  22 of EC2 Instances.
