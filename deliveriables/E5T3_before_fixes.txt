@@ -1,0 +1,134 @@
+------------------------------------------------------------
+/home/mateusvoc/aws/udacity/project-3/c3-vpc.yml
+------------------------------------------------------------------------------------------------------------------------
+[33m| WARN W33[0m
+[33m|[0m
+[33m| Resources: ["PublicSubnet1", "PublicSubnet2"][0m
+[33m| Line Numbers: [71, 82][0m
+[33m|[0m
+[33m| EC2 Subnet should not have MapPublicIpOnLaunch set to true[0m
+------------------------------------------------------------
+[33m| WARN W28[0m
+[33m|[0m
+[33m| Resources: ["NoIngressSecurityGroup"][0m
+[33m| Line Numbers: [210][0m
+[33m|[0m
+[33m| Resource found with an explicit name, this disallows updates that require replacement of this resource[0m
+------------------------------------------------------------
+[31m| FAIL F1000[0m
+[31m|[0m
+[31m| Resources: ["NoIngressSecurityGroup"][0m
+[31m| Line Numbers: [210][0m
+[31m|[0m
+[31m| Missing egress rule means all traffic is allowed outbound.  Make this explicit if it is desired configuration[0m
+
+Failures count: 1
+Warnings count: 3
+------------------------------------------------------------
+/home/mateusvoc/aws/udacity/project-3/c3-s3.yml
+------------------------------------------------------------------------------------------------------------------------
+[33m| WARN W51[0m
+[33m|[0m
+[33m| Resources: ["S3BucketRecipesFree", "S3BucketRecipesSecret", "S3BucketVPCFlowLogs"][0m
+[33m| Line Numbers: [5, 9, 13][0m
+[33m|[0m
+[33m| S3 bucket should likely have a bucket policy[0m
+------------------------------------------------------------
+[33m| WARN W35[0m
+[33m|[0m
+[33m| Resources: ["S3BucketRecipesFree", "S3BucketRecipesSecret", "S3BucketVPCFlowLogs"][0m
+[33m| Line Numbers: [5, 9, 13][0m
+[33m|[0m
+[33m| S3 Bucket should have access logging configured[0m
+------------------------------------------------------------
+[33m| WARN W41[0m
+[33m|[0m
+[33m| Resources: ["S3BucketRecipesFree", "S3BucketRecipesSecret", "S3BucketVPCFlowLogs"][0m
+[33m| Line Numbers: [5, 9, 13][0m
+[33m|[0m
+[33m| S3 Bucket should have encryption option set[0m
+
+Failures count: 0
+Warnings count: 9
+------------------------------------------------------------
+/home/mateusvoc/aws/udacity/project-3/c3-app.yml
+------------------------------------------------------------------------------------------------------------------------
+[33m| WARN W52[0m
+[33m|[0m
+[33m| Resources: ["AppLoadBalancer"][0m
+[33m| Line Numbers: [119][0m
+[33m|[0m
+[33m| Elastic Load Balancer V2 should have access logging enabled[0m
+------------------------------------------------------------
+[33m| WARN W56[0m
+[33m|[0m
+[33m| Resources: ["AppLoadBalancerListener"][0m
+[33m| Line Numbers: [129][0m
+[33m|[0m
+[33m| Elastic Load Balancer V2 Listener Protocol should use HTTPS for ALBs[0m
+------------------------------------------------------------
+[31m| FAIL F3[0m
+[31m|[0m
+[31m| Resources: ["InstanceRole"][0m
+[31m| Line Numbers: [17][0m
+[31m|[0m
+[31m| IAM role should not allow * action on its permissions policy[0m
+------------------------------------------------------------
+[33m| WARN W11[0m
+[33m|[0m
+[33m| Resources: ["InstanceRole"][0m
+[33m| Line Numbers: [17][0m
+[33m|[0m
+[33m| IAM role should not allow * resource on its permissions policy[0m
+------------------------------------------------------------
+[33m| WARN W28[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG", "AppLoadBalancerSG", "AttackInstanceSG", "AppLoadBalancer"][0m
+[33m| Line Numbers: [46, 99, 152, 119][0m
+[33m|[0m
+[33m| Resource found with an explicit name, this disallows updates that require replacement of this resource[0m
+------------------------------------------------------------
+[33m| WARN W40[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG", "AppLoadBalancerSG", "AttackInstanceSG"][0m
+[33m| Line Numbers: [46, 99, 152][0m
+[33m|[0m
+[33m| Security Groups egress with an IpProtocol of -1 found[0m
+------------------------------------------------------------
+[33m| WARN W5[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG", "AppLoadBalancerSG", "AttackInstanceSG"][0m
+[33m| Line Numbers: [46, 99, 152][0m
+[33m|[0m
+[33m| Security Groups found with cidr open to world on egress[0m
+------------------------------------------------------------
+[33m| WARN W42[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG"][0m
+[33m| Line Numbers: [46][0m
+[33m|[0m
+[33m| Security Groups ingress with an ipProtocol of -1 found [0m
+------------------------------------------------------------
+[33m| WARN W9[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG", "AppLoadBalancerSG", "AttackInstanceSG"][0m
+[33m| Line Numbers: [46, 99, 152][0m
+[33m|[0m
+[33m| Security Groups found with ingress cidr that is not /32[0m
+------------------------------------------------------------
+[33m| WARN W2[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG", "AppLoadBalancerSG", "AttackInstanceSG"][0m
+[33m| Line Numbers: [46, 99, 152][0m
+[33m|[0m
+[33m| Security Groups found with cidr open to world on ingress.  This should never be true on instance.  Permissible on ELB[0m
+------------------------------------------------------------
+[33m| WARN W36[0m
+[33m|[0m
+[33m| Resources: ["WebAppSG", "AppLoadBalancerSG", "AttackInstanceSG"][0m
+[33m| Line Numbers: [46, 99, 152][0m
+[33m|[0m
+[33m| Security group rules without a description obscure their purpose and may lead to bad practices in ensuring they only allow traffic from the ports and sources/destinations required.[0m
+
+Failures count: 1
+Warnings count: 23

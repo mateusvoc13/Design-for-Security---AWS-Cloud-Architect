@@ -1,0 +1,47 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+  - [[https://github.com/stelligent/cfn_nag][CFN_NAG]] :: a tool looks for patterns in CloudFormation templates that may
+    indicate insecure infrastructure.
+
+### Example vulnerability
+
+  - Missing egress rule means all traffic is allowed outbound.  Make this
+    explicit if it is desired configuration
+  - IAM role should not allow * action on its permissions policy
+
+##Scan AMI’s or containers for OS vulnerabilities
+
+   - [[https://anchore.com/][Anchore]] :: offers container inspection and compliance solutions for a wide
+     variety of use cases.
+
+   - [[https://aws.amazon.com/blogs/security/how-to-set-up-continuous-golden-ami-vulnerability-assessments-with-amazon-inspector/][Amazon Inspector]] :: performs security assessments of Amazon EC2 instances
+     by using AWS managed rules packages such as the Common Vulnerabilities and
+     Exposures (CVEs) package.
+
+### Example vulnerability
+
+    - Network reachability issues, such as open ports;
+    - Language related issues such as: CPython is vulnerable to an integer
+      overflow (CVE-2017-1000158).
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+    - [[https://geekflare.com/aws-vulnerability-scanner/][AWS Config]] :: an effective tool for assessing, evaluating, recording,
+      auditing configurations of the resources in your AWS environment.
+    - [[https://github.com/cloud-custodian/cloud-custodian][Cloud Custodian]] ::  is a flexible open-source rules engine for managing
+      the AWS cloud resources and accounts to ensure security and policy
+      compliance.
+    - [[https://github.com/toniblyx/prowler][Prowler]] :: is an AWS account’s security configuration assessment,
+      auditing, and hardening tool that also checks compliance with the CIS AWS
+      Foundations security standards.
+
+### Example vulnerability
+
+    - Unencrypted EBS volumes;
+    - Security Group violations;
+    - Invalid VPC external peering connections;
+    - Unencrypted SQS queues.
+
+      Source: https://geekflare.com/aws-vulnerability-scanner/

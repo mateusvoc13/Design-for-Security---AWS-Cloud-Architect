@@ -2,11 +2,15 @@ Based on the architecture diagram, and the steps you have taken so far to upload
 
 # Poor practice 1
 
-- Unencrypted secret recipes
+- Unencrypted secret recipes: assuming only that the data won't be accessed is
+  not enough to make sure that it is secure. Besides protecting the location, it
+  is also crucial to encrypt the content assuring that if malicious activity
+  reaches the data it can't read it.
 
 # Poor practice 2
 
-- API Credentials stored in machine
+- Machine protection using password: allows brute force attackers to access the
+  machine by guessing the password combination.
 
 # Bonus poor practices
 
