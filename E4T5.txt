@@ -1,0 +1,4 @@
+Additional hardening suggestions:
+- HTTPS setup for the ElasticLoadBalancer;
+- More granular selected policies for the Instance role;
+- Enable access logging for the AppLoadBalancer and the S3 Buckets.
