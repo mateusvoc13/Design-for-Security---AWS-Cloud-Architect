@@ -9,7 +9,7 @@ Resources:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: 'aws:kms'
-              KMSMasterKeyID: KMS-KEY-ARN
+
   S3BucketRecipesSecret:
     Type: AWS::S3::Bucket
     Properties:
@@ -18,7 +18,6 @@ Resources:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: 'aws:kms'
-              KMSMasterKeyID: KMS-KEY-ARN
   S3BucketVPCFlowLogs:
       Type: AWS::S3::Bucket
       Properties:
@@ -30,11 +29,19 @@ Outputs:
     Description: Name of the Amazon S3 bucket that you will upload free recipes to.
     Export:
       Name: BucketNameRecipesFree
+
+  BucketArnRecipesFree:
+    Value: !GetAtt S3BucketRecipesFree.Arn
+    Description: ARN of the Amazon S3 bucket that you will upload free recipes to.
+    Export:
+      Name: BucketArnRecipesFree
+
   BucketNameRecipesSecret:
     Value: !Ref 'S3BucketRecipesSecret'
     Description: Name of the Amazon S3 bucket that you will upload secret recipes to.
     Export:
       Name: BucketNameRecipesSecret
+
   BucketArnVPCFlowLogs:
     Value: !GetAtt S3BucketVPCFlowLogs.Arn
     Description: Arn of the Amazon S3 bucket that have vpc flow logs for this project

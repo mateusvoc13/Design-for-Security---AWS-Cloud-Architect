@@ -1,5 +1,4 @@
-# Describe GuardDuty findings that were detected related to the brute force
-  attack
+# Describe GuardDuty findings that were detected related to the brute force attack
 
 * Guard Duty Findings
 
@@ -20,9 +19,15 @@
      - Type, direction, protocol, IP
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may
-  have detected this attack - i.e. what was its source of information.
+# have detected this attack - i.e. what was its source of information.
 
 * How GuardDuty May Have Detected this attack?
 
   The EC2/SSHBruteForce finding is generated through monitoring traffic on port
   22 of EC2 Instances.
+
+  To detect unauthorized and unexpected activity, GuardDuty analyzes and process
+  data from AWS CloudTrail event logs, VPC flow Logs, and DNS logs.
+
+  For the attack mentioned above, the SSHBruteForce, GuardDuty has probably used
+  the *VPC Flow logs* as source of information.
